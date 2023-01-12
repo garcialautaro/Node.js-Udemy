@@ -16,7 +16,7 @@ const crearArchivo = async(base, limite, imprimir) => {
         if(imprimir) {
             console.log(colors.blue(colors.bold(salida)));
         }
-        fs.writeFileSync(`tabla-${base}`, salida);
+        fs.writeFileSync(`./tablas-de-multiplicar/tabla-${base}.txt`, salida);
 
         //console.log(`tabla-${base}.txt creada`);
         return colors.red(`tabla-${base}.txt`.bold);
