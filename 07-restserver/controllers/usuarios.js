@@ -63,6 +63,8 @@ const usuariosPost = async(req, res = response) => {
 const usuariosDelete = async(req = request, res = response) => {
     const {id} = req.params;
 
+    const usuarioAuth = req.Usuario;
+
     //! BORRADO FISICO (NO HACER)
     //! const usuario = await Usuario.findByIdAndDelete(id);
 
@@ -71,7 +73,8 @@ const usuariosDelete = async(req = request, res = response) => {
 
 
     res.json({
-        usuario
+        usuario,
+        usuarioAuth
     });
 }
 
